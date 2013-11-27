@@ -58,12 +58,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, inline: <<-EOT
 
     # vim
-    sudo yum -y install vim
+    yum -y install vim
     echo "syntax on" > /home/vagrant/.vimrc
     echo "alias vi="`which vim` >> /home/vagrant/.bashrc
 
     # git
-    sudo yum -y install git
+    yum -y install git
 
   EOT
 
